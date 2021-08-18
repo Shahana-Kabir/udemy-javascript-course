@@ -1,23 +1,28 @@
-const bestSongs = [
-    {
-        artist: "Bob dylan",
-        song: "I love u",
-    },
-   
-    {
-        artist: "Chuck berry",
-        song: "I play games",
-    },
+// var movieShop = {
+// movie:"The switch",
+// movieFunc(movieDesc){
+//     let movie = "the 2";
+//     console.log(this.movie, movieDesc);
+// },
 
-    {
-        artist: "The Beatles",
-        song: "Hey Jude",
-    },
-    {
-        artist: "Ray Charles",
-        song: "What do I do",
-    },
+// };
+// movieShop.movieFunc('watchings');
 
-];
+//////////
 
-bestSongs.forEach((bestsong) => console.log(bestsong));
+function movieFunc (movieDesc){
+    console.log(this.movie, movieDesc);
+}
+let moveieSHop1 = {
+    movie: "click",
+    movieFunc: movieFunc,
+};
+let moveieSHop2 = {
+    movie: "click2",
+    movieFunc: movieFunc,
+};
+
+moveieSHop1.movieFunc("click is a fantastic movie");
+moveieSHop2.movieFunc("click2 is a fantastic movie");
+
+
